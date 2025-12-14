@@ -19,6 +19,7 @@ import VolunteerEventsFeed from './Screens/VolunteerEventsFeed';
 import WalletScreen from './Screens/WalletScreen';
 import MarketplaceScreen from './Screens/MarketplaceScreen';
 import CampaignsScreen from './Screens/CampaignsScreen';
+import ListingDetail from './Screens/ListingDetail';
 import AnimalAdoption from './Screens/AnimalAdoption';
 import AnimalDetail from './Screens/AnimalDetail';
 import Profil from './Screens/Profil';
@@ -149,6 +150,11 @@ export default function App() {
                 animationEnabled: true,
               }}
             >
+              <Stack.Screen
+                name="ListingDetail"
+                component={ListingDetail}
+                options={{ animation: 'slide_from_bottom' }}
+              />
               <Stack.Screen
                 name="ConnectScreen"
                 component={ConnectScreen}

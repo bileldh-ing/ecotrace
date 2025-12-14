@@ -234,7 +234,7 @@ const Authentication = ({ navigation }) => {
             {/* Glassmorphism Form Container */}
             <View style={styles.formWrapper}>
               <LinearGradient
-                colors={['#2ECC71', 'rgba(46, 204, 113, 0.7)', '#2ECC71']}
+                colors={['rgba(59, 130, 246, 0.3)', 'rgba(34, 197, 94, 0.2)', 'rgba(139, 92, 246, 0.3)']}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
                 style={styles.gradientBorder}
@@ -246,7 +246,7 @@ const Authentication = ({ navigation }) => {
                   <View style={styles.inputGroup}>
                     <Text style={styles.label}>Email Address</Text>
                     <LinearGradient
-                      colors={['rgba(46, 204, 113, 0.22)', 'rgba(46, 204, 113, 0.10)']}
+                      colors={['rgba(59, 130, 246, 0.2)', 'rgba(34, 197, 94, 0.15)']}
                       start={{ x: 0, y: 0 }}
                       end={{ x: 1, y: 1 }}
                       style={styles.inputGradientBorder}
@@ -285,7 +285,7 @@ const Authentication = ({ navigation }) => {
                   <View style={styles.inputGroup}>
                     <Text style={styles.label}>Password</Text>
                     <LinearGradient
-                      colors={['rgba(46, 204, 113, 0.22)', 'rgba(46, 204, 113, 0.10)']}
+                      colors={['rgba(59, 130, 246, 0.2)', 'rgba(34, 197, 94, 0.15)']}
                       start={{ x: 0, y: 0 }}
                       end={{ x: 1, y: 1 }}
                       style={styles.inputGradientBorder}
@@ -548,17 +548,17 @@ const styles = StyleSheet.create({
   },
   formWrapper: {
     marginBottom: 30,
-    borderRadius: 28,
+    borderRadius: 24,
     overflow: 'hidden',
-    shadowColor: 'rgba(59, 130, 246, 0.8)',
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.4,
-    shadowRadius: 30,
-    elevation: 25,
+    shadowColor: 'rgba(59, 130, 246, 0.5)',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.3,
+    shadowRadius: 20,
+    elevation: 20,
   },
   gradientBorder: {
     padding: 2,
-    borderRadius: 28,
+    borderRadius: 24,
     position: 'relative',
   },
   blurBackdrop: {
@@ -572,28 +572,27 @@ const styles = StyleSheet.create({
     borderRadius: 26,
   },
   formContainer: {
-    backgroundColor: 'rgba(10, 10, 20, 0.7)',
-    borderRadius: 26,
-    padding: 32,
+    backgroundColor: 'rgba(10, 10, 20, 0.75)',
+    borderRadius: 22,
+    padding: 24,
     backdropFilter: 'blur(40px)',
-    // Strong glassmorphism effect with dark blue + green border
     borderWidth: 1.5,
-    borderColor: 'rgba(46, 204, 113, 0.75)',
-    shadowColor: 'rgba(46, 204, 113, 0.7)',
+    borderColor: 'rgba(59, 130, 246, 0.3)',
+    shadowColor: 'rgba(59, 130, 246, 0.5)',
     shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.5,
-    shadowRadius: 30,
-    elevation: 25,
+    shadowOpacity: 0.3,
+    shadowRadius: 20,
+    elevation: 20,
     zIndex: 1,
   },
   inputGroup: {
-    marginBottom: 24,
+    marginBottom: 16,
   },
   label: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '600',
     color: 'rgba(255, 255, 255, 0.8)',
-    marginBottom: 10,
+    marginBottom: 8,
     textTransform: 'uppercase',
     letterSpacing: 0.5,
   },
@@ -608,9 +607,9 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   input: {
-    fontSize: 16,
+    fontSize: 15,
     color: '#FFFFFF',
-    padding: 14,
+    padding: 12,
     paddingLeft: 0,
     fontWeight: '500',
     flex: 1,
@@ -729,7 +728,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   signupLink: {
-    color: '#22C55E',
+    color: '#3B82F6',
     fontSize: 16,
     fontWeight: '700',
     textDecorationLine: 'underline',

@@ -258,6 +258,22 @@ export const getItems = async () => {
     }
 };
 
+export const getItemById = async (itemId) => {
+    try {
+        if (!itemId) return null;
+        const itemRef = ref(firebaseDatabase, `eco_marketplace/${itemId}`);
+        const snapshot = await get(itemRef);
+        if (!snapshot.exists()) return null;
+        return {
+            id: itemId,
+            ...snapshot.val(),
+        };
+    } catch (error) {
+        console.error('❌ Error getting item by id:', error);
+        throw error;
+    }
+};
+
 /**
  * Get user items
  */
@@ -685,6 +701,7 @@ export default {
     createItem,
     createScannedItem,
     getItems,
+    getItemById,
     getUserItems,
     updateItemStatus,
     deleteItem,
